@@ -1,6 +1,6 @@
 /******************************* Nav Bar Responsive Css *******************************/
 
-/************************************ 900px  ************************************/
+/****************************** 900px  ******************************/
 @media only screen and (max-width: 900px) {
   .nav-bar .logo {
     font-size: 16px;
@@ -27,7 +27,7 @@
     padding: 15px;
   }
 
-  .nav-bar .cart h2 span {
+  .nav-bar .cart h2 > span {
     display: none;
   }
 
@@ -70,7 +70,7 @@
   }
 }
 
-/************************************ 800px  ************************************/
+/****************************** 800px  ******************************/
 @media only screen and (max-width: 800px) {
   .nav-bar .logo {
     font-size: 14px;
@@ -294,7 +294,7 @@
   }
 }
 
-/************************************ 600px  ************************************/
+/****************************** 600px  ******************************/
 @media only screen and (max-width: 600px) {
   .nav-bar {
     justify-content: space-between;
@@ -540,7 +540,7 @@
   }
 }
 
-/************************************ 540px  ************************************/
+/****************************** 540px  ******************************/
 @media only screen and (max-width: 540px) {
   .main-container .greetingMsg {
     width: 85%;
@@ -783,10 +783,22 @@
     width: 40%;
     height: 40px;
   }
+
+  .profile-container .user .info .editbtn,
+  .profile-container .user .info .eprofile .bbtn {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 1.1rem;
+  }
 }
 
-/************************************ 400px  ************************************/
+/****************************** 400px  ******************************/
 @media only screen and (max-width: 400px) {
+  #loader {
+    background-size: 55%;
+  }
+
   .nav-bar .menu-items {
     width: 100%;
   }
@@ -807,6 +819,16 @@
 
   .nav-bar .menu-items ul li {
     font-size: 0.9rem;
+  }
+
+  .formBox .form form input {
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 6px;
+    outline: none;
+    font-size: 13px;
+    border: none;
+    border-bottom: 1px solid #333;
   }
 
   .main {
@@ -1128,6 +1150,28 @@
     width: 50%;
     height: 25px;
     font-size: 0.6rem;
+  }
+
+  .profile-container .user .info .editbtn,
+  .profile-container .user .info .eprofile .bbtn {
+    font-size: 0.9rem;
+  }
+
+  .profile-container .user .info .eprofile h1 {
+    font-size: 1.1rem;
+  }
+
+  .profile-container .user .info .eprofile input,
+  .profile-container .user .info .eprofile select {
+    margin: 10px auto;
+    width: 80%;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .profile-container .user .info .eprofile input[type="button"] {
+    font-size: 14px;
+    padding: 6px 25px;
   }
 }
 

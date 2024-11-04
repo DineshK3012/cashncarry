@@ -1,11 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   /* font-family: "Source Sans Pro", sans-serif; */
+}
+
+#loader {
+  display: unset;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #ffff url("img/loader.gif") no-repeat center;
+  background-size: 35%;
+  z-index: 9999;
+}
+
+.content {
+  display: none;
 }
 
 ::-webkit-scrollbar {
@@ -81,6 +97,10 @@
   color: white;
 }
 
+.nav-bar .menu-items > i:hover {
+  color: orange;
+}
+
 .nav-bar .menu-items h3 {
   font-size: 1.4rem;
   width: 100%;
@@ -100,6 +120,7 @@
   padding: 20px;
   /* border-bottom: 0.1px solid white;  */
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .nav-bar .menu-items li a {
@@ -137,7 +158,7 @@
   justify-content: space-between;
 }
 
-.nav-bar .search input {
+.nav-bar .search .search-bar input {
   width: 93%;
   padding: 10px;
   outline: none;
@@ -145,10 +166,18 @@
   border-radius: 4px;
 }
 
-.nav-bar .search i {
+.nav-bar .search .search-bar button {
   color: grey;
-  width: 5%;
+  width: 10%;
   font-size: 22px;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.nav-bar .search .search-bar button i {
+  width: 100%;
+  font-size: 20px;
 }
 
 .nav-bar .user {
@@ -301,6 +330,7 @@
 }
 
 .profile-container .user .info {
+  position: relative;
   margin: auto;
   width: 65%;
   gap: 0.1rem;
@@ -353,9 +383,72 @@
   font-weight: bold;
 }
 
+.profile-container .btns button a {
+  text-decoration: none;
+  color: white;
+}
+
 .profile-container .btns button:hover {
   transition: 0.3s;
   background-color: rgb(172, 21, 21);
+}
+
+/**************** editing profile section ****************/
+.profile-container .user .info .eprofile {
+  /* display: flex; */
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  display: none;
+}
+
+.profile-container .user .info .editbtn,
+.profile-container .user .info .eprofile .bbtn {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 1.4rem;
+}
+
+.profile-container .user .info .editbtn:hover,
+.profile-container .user .info .editbtn:hover,
+.profile-container .user .info .eprofile .bbtn {
+  color: orangered;
+}
+
+.profile-container .user .info .eprofile h1 {
+  font-size: 1.2rem;
+  margin: 0.5rem auto;
+  margin-bottom: 0.1rem;
+  text-transform: uppercase;
+}
+
+.profile-container .user .info .eprofile input,
+.profile-container .user .info .eprofile select {
+  margin: 10px auto;
+  width: 80%;
+  font-size: 1rem;
+  padding: 6px 8px;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+}
+
+.profile-container .user .info .eprofile input[type="button"] {
+  margin: 20px auto;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 8px 30px;
+  background-color: orangered;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.profile-container .user .info .eprofile input[type="button"]:hover {
+  background-color: rgb(160, 49, 9);
 }
 
 /************************* LogIn Signup form css*************************/
@@ -505,23 +598,27 @@
 }
 
 .formBox .form form h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #333033;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-.formBox .form form input {
+.formBox .form form input,
+.formBox .form form select,
+.formBox .form form select option {
   width: 100%;
-  margin-bottom: 20px;
-  padding: 10px;
+  margin-bottom: 10px;
+  padding: 6px;
   outline: none;
-  font-size: 16px;
   border: none;
+  font-size: 16px;
+  color: grey;
   border-bottom: 1px solid #333;
 }
 
-.formBox .form form input[type="submit"] {
+.formBox .form form input[type="button"] {
+  margin: 10px 0;
   text-align: center;
   background: orangered;
   border: none;
@@ -531,7 +628,7 @@
   font-weight: bold;
 }
 
-.formBox .form form input[type="submit"]:hover {
+.formBox .form form input[type="button"]:hover {
   font-size: 17px;
   background: rgb(172, 21, 21);
   transition: 0.4s;
@@ -539,6 +636,11 @@
 
 .formBox .form form .forgot {
   columns: #333;
+}
+
+/********** reset password form css **********/
+.ls-container .formBox .signinForm .resetForm {
+  display: none;
 }
 
 /*****************************************************/
@@ -557,6 +659,18 @@
 
 .nav-bar .cart h2 span {
   padding: 0 3px;
+}
+
+.nav-bar .cart .count {
+  width: 20px;
+  height: 20px;
+  /* font-size: 14px; */
+  color: white;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background-color: orangered;
+  border-radius: 50%;
 }
 
 /****************************** Cart Slider ******************************/
@@ -598,6 +712,11 @@
 
 .cart-slide .top h2 i {
   float: right;
+  cursor: pointer;
+}
+
+.cart-slide .top h2 i:hover {
+  color: orange;
 }
 
 .cart-slide .cart-items {
@@ -609,12 +728,24 @@
 }
 
 .cart-slide .cart-items .cart-itm {
+  position: relative;
   padding: 10px 16px;
   color: black;
   background-color: white;
   border-bottom: 1px solid rgb(226, 225, 225);
   display: flex;
   gap: 8px;
+}
+
+.cart-slide .cart-items .cart-itm > i {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  font-size: 18px;
+}
+
+.cart-slide .cart-items .cart-itm > i:hover {
+  color: orangered;
 }
 
 .cart-slide .cart-items .cart-itm .cart-itm-img {
@@ -677,7 +808,9 @@
   width: 20%;
   text-align: center;
   font-weight: bold;
+  border: none;
   /* margin: 0 0.5rem; */
+  background: none;
 }
 
 .cart-slide .cart-items .cart-itm .cart-itm-details .cart-itm-price i:hover {
@@ -695,6 +828,10 @@
   color: gray;
   box-shadow: 0 -4px 4px 4px rgba(0, 0, 0, 0.1);
   padding: 12px;
+}
+
+.cart-slide .bottom a {
+  text-decoration: none;
 }
 
 .cart-slide .bottom p {
@@ -768,8 +905,11 @@
   width: 100%;
 }
 
-.slider-item .slider-item-title h2 {
+.slider-item .slider-item-title a {
+  text-decoration: none;
+  color: black;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .slider-btns .prev {
@@ -801,13 +941,15 @@
 /******************************** Main Section ********************************/
 
 .main {
-  border-top: 1px solid rgb(235, 233, 233);
+  /* border-top: 1px solid rgb(235, 233, 233); */
   padding: 10px 0px;
 }
 
 .main-container {
-  background-color: #fff4ef;
+  /* background-color: #fff4ef; */
   /* background-color: #def2f9; */
+
+  background: linear-gradient(to bottom, #ffffff, #fff4ef, #ffffff);
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -855,6 +997,30 @@
   border-radius: 10px;
   background-color: white;
   cursor: pointer;
+  animation: anim 0.6s ease-in-out infinite alternate;
+}
+
+.main-container .greetingMsg .services .service:nth-child(2) {
+  animation: anim 0.6s ease-in-out infinite 0.2s alternate;
+}
+
+.main-container .greetingMsg .services .service:nth-child(3) {
+  animation: anim 0.6s ease-in-out infinite 0.4s alternate;
+}
+
+.main-container .greetingMsg .services .service:nth-child(4) {
+  animation: anim 0.6s ease-in-out infinite 0.6s alternate;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(10%);
+    box-shadow: 0px 5px 10px 0px rgb(255, 252, 252),
+      0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .main-container .greetingMsg .services .service h4 {
@@ -928,6 +1094,11 @@
   width: 60%;
 }
 
+.category .category-container-slider .category-item .category-detail p a {
+  text-decoration: none;
+  color: black;
+}
+
 .category .category-container .category-item .category-detail .offer,
 .category .category-container-slider .category-item .category-detail .offer {
   font-size: 1.1rem;
@@ -945,6 +1116,11 @@
   font-weight: 700;
   color: rgba(0, 0, 0, 0.9);
   text-transform: uppercase;
+}
+
+.category .category-container .category-item .category-detail .category-name a {
+  text-decoration: none;
+  color: black;
 }
 
 .category .category-container-slider {
@@ -1008,11 +1184,20 @@
   display: none;
 }
 
-/********************************** Prodcuts section **********************************/
+/******************************* Products section **********************************/
 .products {
   /* border-top: 1px solid grey; */
   width: 100%;
   position: relative;
+}
+
+.show {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show .prdct {
+  width: 30%;
 }
 
 .products h1 {
@@ -1032,6 +1217,7 @@
   font-size: 1.5rem;
   padding: 0.8rem 1rem;
   color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
 }
 
 .products .product-cate h2 span {
@@ -1282,6 +1468,13 @@
   color: green;
 }
 
+.product-specs .product-single .product-desc .product-outstock {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: red;
+}
+
 .product-specs .product-single .product-desc > div .atc {
   width: 65%;
   border: none;
@@ -1342,7 +1535,7 @@
 }
 
 .stickyDiv .prdct-cates {
-  height: 65px;
+  /* height: 65px; */
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
@@ -1355,13 +1548,15 @@
   padding: 0.5rem 1rem;
   border: 1px solid rgb(236, 234, 234);
   border-radius: 12px;
-  width: fit-content;
+  width: 100%;
 }
 
-.stickyDiv .prdct-cates .prdct-cates-item p {
+.stickyDiv .prdct-cates .prdct-cates-item a {
+  text-decoration: none;
+  color: grey;
+  width: fit-content;
+  height: 50px;
   font-size: 1.05rem;
-  width: 100%;
-  height: 100%;
   overflow-y: hidden;
 }
 
@@ -1377,6 +1572,18 @@
   padding: 0.5rem 1rem;
   border: 1px solid rgb(236, 234, 234);
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+}
+
+.category-products .cate-products .prdct .seeMore {
+  padding: 45% 0;
+}
+
+.category-products .cate-products .prdct .seeMore a {
+  text-decoration: none;
+  color: red;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
 }
 
 .category-products h1 {
@@ -1560,6 +1767,7 @@ footer {
   width: 100%;
   background-color: #f8f8f8;
   padding: 2rem 2.5rem;
+  font-family: "Poppins", sans-serif;
 }
 
 footer .first {

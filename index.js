@@ -85,23 +85,13 @@ function showProductSpecs() {
 }
 
 //Product gallery images scripts
-let productImg = document.getElementById('prdct-img');
-let otherImgs = document.getElementsByClassName('other-img');
+function otherf(e) {
+    let primary = e.parentElement.parentElement.querySelector('.primary-img')
+    let otherImg = e.querySelector('.other-img');
+    // console.log(otherImg);
+    // console.log(primary);
 
-otherImgs[0].onclick = function () {
-    productImg.src = otherImgs[0].src;
-}
-
-otherImgs[1].onclick = function () {
-    productImg.src = otherImgs[1].src;
-}
-
-otherImgs[2].onclick = function () {
-    productImg.src = otherImgs[2].src;
-}
-
-otherImgs[3].onclick = function () {
-    productImg.src = otherImgs[3].src;
+    primary.src = otherImg.src;
 }
 
 //function to show user profile
@@ -153,6 +143,13 @@ function updateCart() {
     // console.log(sum);
     let cartAmount = document.querySelector('.cart-slide .bottom .proceed-btn > div span');
     cartAmount.innerHTML = sum;
+    // console.log(cartAmount.innerHTML);
+
+    let cartinputtotal = document.querySelector('.cart-slide .bottom form .totalAmount');
+    cartinputtotal.value = sum;
+    // console.log(cartinputtotal);
+
+    // console.log(cartinputtotal.value);
 }
 
 //function to increase quantity of a item in cart
@@ -165,6 +162,23 @@ function increaseQn(e) {
     inputVal++;
 
     input.value = inputVal;
+
+    let proid = e.parentElement.parentElement.parentElement.parentElement.querySelector('input[name=proid]').value;
+
+    // console.log("Increasing quantity of product with id " + proid);
+
+    $.ajax({
+        url: 'partials/_increaseQn.php',
+        method: 'POST',
+        data: {
+            pid: proid,
+            pqn: input.value,
+        },
+        success: function (data) {
+            // console.log(data);
+        }
+    });
+
 }
 
 //function to decrease quantity of a item in cart
@@ -180,6 +194,21 @@ function decreaseQn(e) {
     }
 
     input.value = inputVal;
+
+    let proid = e.parentElement.parentElement.parentElement.parentElement.querySelector('input[name=proid]').value;
+
+    // console.log("Decreasing quantity of product with id " + proid);
+    $.ajax({
+        url: 'partials/_decreaseQn.php',
+        method: 'POST',
+        data: {
+            pid: proid,
+            pqn: input.value,
+        },
+        success: function (data) {
+            // console.log(data);
+        }
+    });
 }
 
 // Other page js 
@@ -211,3 +240,13 @@ function rnrFunc() {
     let map = document.querySelector('.mp-box');
     map.classList.add('hide');
 }
+
+// function for preloader
+$(window).on('load', function () {
+    $('#loader').show();
+
+    setTimeout(function () {
+        $('#loader').hide();
+        $('.content').show();
+    }, 2000);
+});
