@@ -1,0 +1,1134 @@
+/******************************* Nav Bar Responsive Css *******************************/
+
+/************************************ 900px  ************************************/
+@media only screen and (max-width: 900px) {
+  .nav-bar .logo {
+    font-size: 16px;
+    padding: 10px 5px;
+  }
+
+  .nav-bar .menu {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav-bar .search {
+    width: 70%;
+  }
+
+  .nav-bar .user {
+    display: none;
+  }
+
+  .nav-bar .cart {
+    width: 8%;
+    font-size: 22px;
+    padding: 15px;
+  }
+
+  .nav-bar .cart h2 span {
+    display: none;
+  }
+
+  .main-container .greetingMsg h1,
+  .main-container .greetingMsg h2 span {
+    font-size: 1.8rem;
+  }
+
+  .main-container .greetingMsg h2 {
+    font-size: 1.7rem;
+  }
+
+  .main-container .greetingMsg .services .service h4 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: rgb(122, 121, 121);
+    padding-bottom: 4px;
+    margin: 2px 8px;
+  }
+
+  .category .category-container .category-item .category-detail .offer {
+    font-size: 0.8rem;
+  }
+
+  .category .category-container .category-item .category-detail .category-name {
+    font-size: 0.9rem;
+  }
+
+  /******************* download app section css *******************/
+  .downloadApp .phone img {
+    width: 60%;
+  }
+
+  .profile-container .user .info .row .label {
+    padding: 0.7rem 0.2rem;
+  }
+
+  .profile-container .user .info .row .input {
+    padding: 0.7rem 0.2rem;
+  }
+}
+
+/************************************ 800px  ************************************/
+@media only screen and (max-width: 800px) {
+  .nav-bar .logo {
+    font-size: 14px;
+    padding: 10px 0px;
+  }
+
+  .nav-bar .menu {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .nav-bar .menu-items .logo img {
+    width: 70%;
+  }
+
+  .nav-bar .menu-items h3 {
+    padding-top: 18%;
+  }
+
+  /**************** Login/signup form ****************/
+  .ls-container {
+    margin: 25px auto;
+    width: 70%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ls-container .oraBg {
+    top: 0;
+    height: 100%;
+  }
+
+  .formBox {
+    width: 100%;
+    height: 80%;
+    top: 0;
+    box-shadow: none;
+  }
+
+  .oraBg i.l {
+    top: -46%;
+    left: 3.5%;
+  }
+
+  .oraBg i.r {
+    top: 33%;
+    right: -88%;
+  }
+
+  .oraBg .box {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+  }
+
+  .box.signin {
+    top: 0;
+  }
+
+  .formBox.active {
+    left: 0;
+    top: 20%;
+  }
+
+  .formBox .form {
+    padding: 44px;
+  }
+
+  .formBox .form form h3 {
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+  }
+
+  .formBox .form form input {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  /********************************************/
+
+  .main-container .greetingMsg h1,
+  .main-container .greetingMsg h2 span {
+    font-size: 1.4rem;
+  }
+
+  .main-container .greetingMsg h2 {
+    font-size: 1.3rem;
+  }
+
+  .main-container .greetingMsg .services .service h4 {
+    font-size: 0.6rem;
+  }
+
+  .category .category-container .category-item .category-detail .offer {
+    font-size: 0.6rem;
+  }
+
+  .category .category-container .category-item .category-detail .category-name {
+    font-size: 0.7rem;
+  }
+
+  /*************************** product specs css ***************************/
+  .product-specs > i {
+    font-size: 1.3rem;
+  }
+
+  .product-specs .product-single .product-imgs {
+    width: 60%;
+  }
+
+  .product-specs .product-single .product-desc {
+    width: 40%;
+  }
+
+  .product-specs .product-single .product-desc .product-category {
+    font-size: 1rem;
+  }
+
+  .product-specs .product-single .product-desc .product-name {
+    font-size: 1.2rem;
+  }
+
+  .product-specs .product-single .product-desc .product-price {
+    font-size: 1.4rem;
+  }
+
+  .product-specs .product-single .product-desc > div {
+    margin: 0.5rem 0;
+  }
+
+  .product-specs .product-single .product-desc input {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  .product-specs .product-single .product-desc .product-instock {
+    font-size: 1rem;
+    margin: 0.1rem 0;
+  }
+
+  .product-specs .product-single .product-desc > div .atc {
+    font-size: 1rem;
+  }
+
+  .product-specs .product-single .product-desc .specs h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+  }
+
+  .product-specs .product-single .product-desc .specs p {
+    margin: 0.1rem 0;
+    font-size: 0.8rem;
+  }
+
+  .category-products .cate-products .prdct {
+    width: 45%;
+  }
+
+  /******************* download app section css *******************/
+  .downloadApp .phone img {
+    width: 70%;
+  }
+
+  .downloadApp .app-links h1 {
+    font-size: 1.6rem;
+    margin: 0.5rem;
+  }
+
+  .downloadApp .app-links h2 {
+    font-size: 1.5rem;
+    margin: 0.2rem;
+  }
+
+  /******************************** user profile ********************************/
+  .profile-container {
+    height: fit-content;
+  }
+
+  .profile-container > i {
+    font-size: 1.4rem;
+  }
+
+  .profile-container h1 {
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .profile-container .user {
+    border-radius: 16px;
+  }
+
+  .profile-container .user p {
+    font-size: 1.4rem;
+  }
+
+  .profile-container .user .info .row .label {
+    width: 30%;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: left;
+    padding: 0.5rem 0.2rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .profile-container .user .info .row .input {
+    width: 70%;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.2rem;
+  }
+
+  .profile-container .btns button {
+    width: 40%;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+/************************************ 600px  ************************************/
+@media only screen and (max-width: 600px) {
+  .nav-bar {
+    justify-content: space-between;
+  }
+
+  .nav-bar .logo {
+    display: none;
+  }
+
+  .nav-bar .menu {
+    width: 13%;
+  }
+
+  .nav-bar .menu-items {
+    width: 60%;
+  }
+
+  .nav-bar .menu-items .logo {
+    display: block;
+  }
+
+  .nav-bar .menu-items .logo img {
+    width: 70%;
+  }
+
+  .nav-bar .search {
+    width: 70%;
+  }
+
+  .nav-bar .search .search-bar {
+    justify-content: space-evenly;
+    padding: 4;
+  }
+
+  .nav-bar .search input {
+    width: 84%;
+    padding: 10px 0px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .nav-bar .search i {
+    padding: 8px 0px;
+    width: 10%;
+    font-size: 20px;
+  }
+
+  .nav-bar .cart {
+    width: 16%;
+  }
+
+  .cart-slide-Toggle {
+    width: 100%;
+  }
+
+  /**************** Login/signup form ****************/
+  .ls-container {
+    width: 90%;
+  }
+
+  .formBox .form {
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .oraBg .box h2 {
+    font-size: 1rem;
+  }
+
+  .oraBg .box button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+  /********************************************/
+
+  .main-container {
+    flex-direction: column-reverse;
+  }
+
+  .main-container .vector {
+    width: 100%;
+  }
+
+  .main-container .vector img {
+    width: 100%;
+  }
+
+  .main-container .greetingMsg {
+    width: 80%;
+  }
+
+  .main-container .greetingMsg h1,
+  .main-container .greetingMsg h2 span {
+    font-size: 2.3rem;
+  }
+
+  .main-container .greetingMsg h2 {
+    font-size: 2.2rem;
+  }
+
+  .main-container .greetingMsg .services .service h4 {
+    font-size: 1.05rem;
+  }
+
+  .category .category-container {
+    display: none;
+  }
+
+  .category .category-container-slider .category-item {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .category .category-slider-btns {
+    display: unset;
+  }
+
+  /***************************** product specs css *****************************/
+  .product-specs > i {
+    font-size: 1.3rem;
+  }
+
+  .product-specs .product-single {
+    flex-direction: column;
+  }
+
+  .product-specs .product-single .product-imgs {
+    width: 100%;
+  }
+
+  .product-specs .product-single .product-desc {
+    width: 94%;
+  }
+
+  .product-specs .product-single .product-desc .product-category {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .product-specs .product-single .product-desc .product-name {
+    font-size: 1.2rem;
+  }
+
+  .product-specs .product-single .product-desc .product-price {
+    font-size: 1.4rem;
+  }
+
+  .product-specs .product-single .product-desc > div {
+    margin: 0.5rem 0;
+  }
+
+  .product-specs .product-single .product-desc input {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  .product-specs .product-single .product-desc .product-instock {
+    font-size: 1rem;
+    margin: 0.1rem 0;
+  }
+
+  .product-specs .product-single .product-desc > div .atc {
+    font-size: 1rem;
+  }
+
+  .product-specs .product-single .product-desc .specs h3 {
+    font-size: 1.1rem;
+    margin: 0.2rem 0;
+  }
+
+  .product-specs .product-single .product-desc .specs p {
+    margin: 0.1rem 0;
+    font-size: 0.8rem;
+  }
+
+  .category-products h1 {
+    font-size: 21px;
+  }
+
+  /******************* download app section css *******************/
+  .downloadApp .app-links .stores {
+    width: 70%;
+  }
+
+  /************************** footer section css **************************/
+  footer .first .comName img {
+    width: 100%;
+  }
+
+  footer .first .getintouch .head {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  footer .first .getintouch span {
+    font-size: 14px;
+    font-weight: 600;
+    color: grey;
+  }
+
+  footer .second .categories .items > div {
+    width: 48%;
+    margin: 0rem 0;
+  }
+
+  footer .second .about .items > div,
+  footer .second .foryou .items > div,
+  footer .second .app-links .items > div {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  footer .second .categories .head,
+  footer .second .about .head,
+  footer .second .foryou .head,
+  footer .second .app-links .head {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+  }
+
+  footer .second .categories .items a,
+  footer .second .about .items a,
+  footer .second .foryou .items a,
+  footer .second .app-links .items a {
+    font-size: 13px;
+  }
+
+  footer .second .app-links .items a img {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer .third p {
+    font-size: 12px;
+  }
+}
+
+/************************************ 540px  ************************************/
+@media only screen and (max-width: 540px) {
+  .main-container .greetingMsg {
+    width: 85%;
+  }
+
+  .main-container .greetingMsg h1,
+  .main-container .greetingMsg h2 span {
+    font-size: 1.8rem;
+  }
+
+  .main-container .greetingMsg h2 {
+    font-size: 1.7rem;
+  }
+
+  .main-container .greetingMsg .services .service h4 {
+    font-size: 0.9rem;
+  }
+
+  .nav-bar .menu-items {
+    width: 60%;
+  }
+
+  .nav-bar .menu-open {
+    left: -60%;
+  }
+
+  .nav-bar .menu-items .logo img {
+    width: 80%;
+  }
+
+  .nav-bar .menu-items h3 {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    padding-top: 18%;
+  }
+
+  .nav-bar .menu-items ul li {
+    font-size: 0.9rem;
+  }
+
+  .slider-btns .next,
+  .slider-btns .prev {
+    top: 13%;
+  }
+
+  .category-products {
+    width: 95%;
+    padding: 0.5rem 0;
+  }
+
+  .category-products h1 {
+    font-size: 19px;
+    padding: 0 0.5rem;
+  }
+
+  .category-products .cate-products .prdct {
+    width: 44%;
+    margin: auto 4px;
+  }
+
+  .category-products .cate-products .prdct .prdct-details .prdct-name {
+    font-size: 15px;
+  }
+
+  .category-products .cate-products .prdct .prdct-details .prdct-unit {
+    font-size: 14px;
+  }
+
+  .category-products .cate-products .prdct .prdct-details .prdct-price {
+    font-size: 16px;
+  }
+
+  .category-products .cate-products .prdct .atc {
+    font-size: 15px;
+  }
+
+  .category-products .cate-products .prdct-desc a {
+    font-size: 16px;
+  }
+
+  /******************* download app section css *******************/
+  .downloadApp .phone img {
+    width: 70%;
+  }
+
+  .downloadApp .app-links h1 {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+  }
+
+  .downloadApp .app-links h2 {
+    font-size: 1.1rem;
+    margin: 0.2rem;
+  }
+
+  .downloadApp .app-links .stores {
+    width: 80%;
+  }
+
+  /*************************** footer section css ***************************/
+  footer .first,
+  footer .second {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  footer .first .comName {
+    width: 55%;
+  }
+
+  footer .first .comName img {
+    width: 90%;
+  }
+
+  footer .first .getintouch {
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+
+  footer .first .getintouch .head {
+    font-size: 18px;
+  }
+
+  footer .first .getintouch span {
+    font-size: 16px;
+  }
+
+  footer .second .categories {
+    width: 100%;
+    /* border: 1px solid grey; */
+  }
+
+  footer .second .categories .head,
+  footer .second .about .head,
+  footer .second .foryou .head,
+  footer .second .app-links .head {
+    font-size: 17px;
+    margin-top: 0.5rem;
+  }
+
+  footer .second .categories .items > div {
+    width: 48%;
+    margin: 0.3rem 0;
+  }
+
+  footer .second .about .items > div,
+  footer .second .foryou .items > div {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  footer .second .app-links .items {
+    display: flex;
+    gap: 15px;
+  }
+
+  footer .second .app-links .items > div {
+    width: 30%;
+    margin: 0.5rem 0;
+  }
+
+  footer .second .about,
+  footer .second .foryou,
+  footer .second .app-links {
+    width: 100%;
+  }
+
+  footer .second .app-link .items {
+    display: flex;
+  }
+
+  footer .second .app-links .items a img {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer .third p {
+    font-size: 12px;
+  }
+
+  /******************************** user profile ********************************/
+  .profile-container {
+    height: 90vh;
+  }
+
+  .profile-container > i {
+    font-size: 1.4rem;
+  }
+
+  .profile-container h1 {
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .profile-container .user {
+    flex-direction: column;
+    border-radius: 16px;
+    background: linear-gradient(
+      to bottom,
+      rgba(88, 104, 43, 0.45),
+      rgba(210, 233, 151, 0.25)
+    );
+  }
+
+  .profile-container .user .user-vector {
+    width: 100%;
+    margin: auto;
+    border: none;
+    border-bottom: 3px solid rgb(232, 243, 209);
+  }
+
+  .profile-container .user .user-vector img {
+    width: 60%;
+  }
+
+  .profile-container .user p {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+  }
+
+  .profile-container .user .info {
+    width: 100%;
+  }
+
+  .profile-container .user .info .row .label {
+    width: 30%;
+    padding: 0.6rem 1rem;
+  }
+
+  .profile-container .user .info .row .input {
+    width: 70%;
+    font-size: 0.8rem;
+    padding: 0.6rem 0.5rem;
+  }
+
+  .profile-container .btns button {
+    width: 40%;
+    height: 40px;
+  }
+}
+
+/************************************ 400px  ************************************/
+@media only screen and (max-width: 400px) {
+  .nav-bar .menu-items {
+    width: 100%;
+  }
+
+  .nav-bar .menu-open {
+    left: -100%;
+  }
+
+  .nav-bar .menu-items .logo img {
+    width: 65%;
+  }
+
+  .nav-bar .menu-items h3 {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    padding-top: 15%;
+  }
+
+  .nav-bar .menu-items ul li {
+    font-size: 0.9rem;
+  }
+
+  .main {
+    padding: 0;
+    border: none;
+  }
+
+  .main .main-container {
+    padding: 0;
+    border: none;
+  }
+
+  .main-container .greetingMsg {
+    padding-top: 15px;
+    width: 85%;
+  }
+
+  .main-container .greetingMsg h1,
+  .main-container .greetingMsg h2 span {
+    font-size: 1.3rem;
+  }
+
+  .main-container .greetingMsg h2 {
+    font-size: 1.2rem;
+  }
+
+  .main-container .greetingMsg .services .service h4 {
+    font-size: 0.5rem;
+  }
+
+  .category h1 {
+    font-size: 1.4rem;
+  }
+
+  .category .category-container-slider .category-item .category-detail .offer {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgb(179, 179, 0);
+  }
+
+  .category
+    .category-container-slider
+    .category-item
+    .category-detail
+    .category-name {
+    font-size: 0.9rem;
+  }
+
+  .category .category-container-slider .category-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .category .category-container-slider .category-item .category-img {
+    width: 80%;
+  }
+
+  .category-slider,
+  .category-slider .slider-item,
+  .slider-btns {
+    display: none;
+  }
+
+  .products h1 {
+    font-size: 1.4rem;
+  }
+
+  .products .product-cate h2 {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .products .product-cate h2 span {
+    font-size: 0.8rem;
+  }
+
+  .cart-slide .cart-items .cart-itm .cart-itm-details .cart-itm-discount {
+    font-size: 11px;
+  }
+
+  .cart-slide .cart-items .cart-itm .cart-itm-details .cart-itm-desc {
+    font-size: 16px;
+  }
+
+  .cart-slide .cart-items .cart-itm .cart-itm-details .cart-itm-price i {
+    font-size: 16px;
+  }
+
+  .cart-slide .cart-items .cart-itm .cart-itm-details .cart-itm-price {
+    font-size: 12px;
+  }
+
+  .cart-slide .bottom p {
+    font-size: 10px;
+  }
+
+  .cart-slide .bottom .proceed-btn {
+    font-size: 14px;
+  }
+
+  .cart-slide .bottom .proceed-btn span i {
+    font-size: 11px;
+  }
+
+  /******************************* product specs css *******************************/
+  .product-specs {
+    width: 100%;
+  }
+
+  .product-specs > i {
+    top: 1%;
+    font-size: 1.1rem;
+  }
+
+  .product-specs .product-single .product-desc .product-category {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .product-specs .product-single .product-desc .product-name {
+    font-size: 0.9rem;
+  }
+
+  .product-specs .product-single .product-desc .product-price {
+    font-size: 1.1rem;
+  }
+
+  .product-specs .product-single .product-desc > div {
+    margin: 0.5rem 0;
+  }
+
+  .product-specs .product-single .product-desc input {
+    font-size: 0.8rem;
+    margin-right: 1rem;
+  }
+
+  .product-specs .product-single .product-desc .product-instock {
+    font-size: 0.8rem;
+  }
+
+  .product-specs .product-single .product-desc > div .atc {
+    font-size: 0.8rem;
+  }
+
+  .product-specs .product-single .product-desc .specs h3 {
+    font-size: 0.8rem;
+  }
+
+  .product-specs .product-single .product-desc .specs p {
+    margin: 0.1rem 0;
+    font-size: 0.6rem;
+  }
+
+  .category-products {
+    padding: 0.5rem;
+  }
+
+  .category-products h1 {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+  }
+
+  .category-products .cate-products .prdct {
+    width: 100%;
+  }
+
+  /******************* download app section css *******************/
+  .downloadApp {
+    flex-direction: column;
+  }
+
+  .downloadApp .phone {
+    width: 35%;
+    text-align: center;
+  }
+
+  .downloadApp .phone img {
+    width: 100%;
+  }
+
+  .downloadApp .app-links {
+    width: 90%;
+  }
+
+  .downloadApp .app-links h1 {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  .downloadApp .app-links h2 {
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
+  }
+
+  .downloadApp .app-links .stores {
+    width: 80%;
+    margin: 0.5rem auto;
+  }
+
+  /*************************** footer section css ***************************/
+  footer {
+    padding: 1rem;
+  }
+
+  footer .first,
+  footer .second {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  footer .first .comName {
+    width: 55%;
+  }
+
+  footer .first .comName img {
+    width: 100%;
+  }
+
+  footer .first .getintouch {
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+
+  footer .first .getintouch .head {
+    font-size: 15px;
+  }
+
+  footer .first .getintouch span {
+    font-size: 13px;
+  }
+
+  footer .second .categories .head,
+  footer .second .about .head,
+  footer .second .foryou .head,
+  footer .second .app-links .head {
+    font-size: 16px;
+  }
+
+  footer .second .categories .items > div {
+    width: 48%;
+    margin: 0.1rem 0;
+  }
+
+  footer .second .about .items > div,
+  footer .second .foryou .items > div {
+    width: 100%;
+    margin: 0.3rem 0;
+  }
+
+  footer .second .app-links .items {
+    display: flex;
+    gap: 10px;
+  }
+
+  footer .second .app-links .items > div {
+    width: 44%;
+    margin: 0.5rem 0;
+  }
+
+  footer .third p {
+    font-size: 10px;
+  }
+
+  /******************************** user profile ********************************/
+  .profile-container {
+    height: fit-content;
+  }
+
+  .profile-container > i {
+    top: 2%;
+    font-size: 1.1rem;
+  }
+
+  .profile-container h1 {
+    padding: 0.3rem 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .profile-container .user {
+    border-radius: 10px;
+    width: 90%;
+  }
+
+  .profile-container .user .user-vector img {
+    width: 70%;
+  }
+
+  .profile-container .user p {
+    font-size: 1rem;
+    padding: 0.2rem 0;
+  }
+
+  .profile-container .user .info {
+    padding: 0.3rem 0;
+  }
+
+  .profile-container .user .info .row .label {
+    width: 30%;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.1rem;
+    padding-left: 0.3rem;
+  }
+
+  .profile-container .user .info .row .input {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.1rem;
+    padding-left: 0.5rem;
+  }
+
+  .profile-container .btns {
+    width: 90%;
+    margin: 0.3rem;
+  }
+
+  .profile-container .btns button {
+    width: 50%;
+    height: 25px;
+    font-size: 0.6rem;
+  }
+}
+
+/*************************************************************************/

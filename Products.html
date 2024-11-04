@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="icon" href="img/6.png" type="image/icon type">
+
+    <!-- Css Files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- owl Carousel Css -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+</head>
+
+<body>
+    <!------------------------------ Navigation Bar ------------------------------>
+    <nav class="nav-bar">
+        <div class="menu">
+            <i class="fas fa-bars menu-btn" onclick="showMenu()"></i>
+        </div>
+        <div class="menu-items menu-open" id="menu-bar">
+            <div class="logo">
+                <a href="index.html"><img src="img/4.png" alt="LOGO_Cash'N'Carry"></a>
+            </div>
+            <h3>Welcome</h3>
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li onclick="showlsForm()"><a href=" #"><i class="fas fa-user"></i> &nbsp;Login</a></li>
+                <li onclick="showProfile()"><a href="#"><i class="fas fa-user-alt"></i> &nbsp;My Profile</a></li>
+                <li onclick="cartSlide()"><a href="#"><i class="fas fa-shopping-cart"></i> &nbsp;My Cart</a></li>
+                <li><a href="#"><i class="fas fa-gift"></i> &nbsp;My Orders</a></li>
+                <li onclick="showProfile()"><a href="#"><i class="fas fa-map-marked-alt"></i> &nbsp;My Address</a>
+                </li>
+                <li><a href="#"><i class="fas fa-percent"></i> &nbsp;Offers</a></li>
+            </ul>
+        </div>
+
+        <div class="logo">
+            <!-- <h1>Cash'NCarry</h1> -->
+            <a href="index.html"><img src="img/4.png" alt="LOGO_Cash'N'Carry"></a>
+        </div>
+
+        <div class="search">
+            <div class="search-bar">
+                <input type="search" name="search" placeholder="Search for products">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="user">
+            <span onclick="dropdownMenu()">
+                <h2>My Account </h2>
+                <p>Login/SignUp <i class="fas fa-angle-down"></i></p>
+            </span>
+            <div class="dropdown-usermenu" id="dd-Menu">
+                <div class="dropdown-item"><button class="ls-btn"
+                        onclick="showProfile(),dropdownMenu()">Profile</button></div>
+                <div class="dropdown-item"><button class="ls-btn" onclick="showlsForm()">Login/Signup</button></div>
+                <div class="dropdown-item"><i class="far fa-question-circle"></i> FAQ</div>
+                <div class="dropdown-item"><i class="fas fa-percent"></i> Offers</div>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2 onclick="cartSlide()"><i class="fas fa-shopping-cart"></i> <span>My Cart</span></h2>
+        </div>
+    </nav>
+
+    <div id="modal-bg">
+    </div>
+
+    <!-- sliding cart -->
+    <div class="cart-slide" id="sliding-cart">
+        <div class="top">
+            <h2>My Cart<span></span><i class="fas fa-times" onclick="cartSlide()"></i></h2>
+        </div>
+
+        <div class="cart-items">
+            <div class="cart-itm">
+                <div class="cart-itm-img">
+                    <img src="img/groceries_staples.png" alt="">
+                </div>
+                <div class="cart-itm-details">
+                    <p class="cart-itm-discount">5% OFF</p>
+                    <p class="cart-itm-desc">
+                        Safola Oil (1kg)
+                    </p>
+                    <div class="cart-itm-price">
+                        <div class="item-qn">
+                            <i class="fas fa-minus-circle deqn" onclick="decreaseQn(this),updateCart()"></i>
+                            <input type="number" name="quantity" value="1">
+                            <i class="fas fa-plus-circle inqn" onclick="increaseQn(this),updateCart()"></i>
+                            <b>X</b>
+                        </div>
+                        <div class="item-p">
+                            <b>₹</b><span>40</span>
+                        </div>
+                        <div class="item-tp">
+                            <b>₹</b><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-itm">
+                <div class="cart-itm-img">
+                    <img src="img/groceries_staples.png" alt="">
+                </div>
+                <div class="cart-itm-details">
+                    <p class="cart-itm-discount">5% OFF</p>
+                    <p class="cart-itm-desc">
+                        Safola Oil (2kg)
+                    </p>
+                    <div class="cart-itm-price">
+                        <div class="item-qn">
+                            <i class="fas fa-minus-circle deqn" onclick="decreaseQn(this),updateCart()"></i>
+                            <input type="number" name="quantity" value="1">
+                            <i class="fas fa-plus-circle inqn" onclick="increaseQn(this),updateCart()"></i>
+                            <b>X</b>
+                        </div>
+                        <div class="item-p">
+                            <b>₹</b><span>80</span>
+                        </div>
+                        <div class="item-tp">
+                            <b>₹</b><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-itm">
+                <div class="cart-itm-img">
+                    <img src="img/groceries_staples.png" alt="">
+                </div>
+                <div class="cart-itm-details">
+                    <p class="cart-itm-discount">5% OFF</p>
+                    <p class="cart-itm-desc">
+                        Safola Oil (10kg)
+                    </p>
+                    <div class="cart-itm-price">
+                        <div class="item-qn">
+                            <i class="fas fa-minus-circle deqn" onclick="decreaseQn(this),updateCart()"></i>
+                            <input type="number" name="quantity" value="1">
+                            <i class="fas fa-plus-circle inqn" onclick="increaseQn(this),updateCart()"></i>
+                            <b>X</b>
+                        </div>
+                        <div class="item-p">
+                            <b>₹</b><span>380</span>
+                        </div>
+                        <div class="item-tp">
+                            <b>₹</b><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-itm">
+                <div class="cart-itm-img">
+                    <img src="img/groceries_staples.png" alt="">
+                </div>
+                <div class="cart-itm-details">
+                    <p class="cart-itm-discount">5% OFF</p>
+                    <p class="cart-itm-desc">
+                        Safola Oil (10kg)
+                    </p>
+                    <div class="cart-itm-price">
+                        <div class="item-qn">
+                            <i class="fas fa-minus-circle deqn" onclick="decreaseQn(this),updateCart()"></i>
+                            <input type="number" name="quantity" value="1">
+                            <i class="fas fa-plus-circle inqn" onclick="increaseQn(this),updateCart()"></i>
+                            <b>X</b>
+                        </div>
+                        <div class="item-p">
+                            <b>₹</b><span>380</span>
+                        </div>
+                        <div class="item-tp">
+                            <b>₹</b><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <p>Promo code can be applied on payment page</p>
+            <button class="proceed-btn">Proceed to Checkout<div><b>₹</b><span>570</span> <i
+                        class="fas fa-chevron-right"></i></div>
+            </button>
+        </div>
+    </div>
+
+    <!------------------------------ user profile ------------------------------>
+    <div class="profile-container">
+        <i class="fas fa-times" onclick="showProfile()"></i>
+        <h1><i class="fas fa-user-alt"></i> Profile</h1>
+        <div class="user">
+            <div class="user-vector">
+                <img src="img/user.png" alt="user-vector">
+                <p>Aarav</p>
+            </div>
+            <div class="info">
+                <div class="row">
+                    <div class="label">
+                        Full Name
+                    </div>
+                    <div class="input">
+                        Aarav Tickoo
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="label">
+                        Gender
+                    </div>
+                    <div class="input">
+                        Male
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="label">
+                        Email
+                    </div>
+                    <div class="input">
+                        aaravtickoo@gmail.com
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="label">
+                        Phone No.
+                    </div>
+                    <div class="input">
+                        +91 9484746454
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="label">
+                        Address
+                    </div>
+                    <div class="input">
+                        House No. 34, Gokuldham Society, Karol Bhag(New Delhi)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button class="myOrders-btn" onclick="showProfile()"><i class="fas fa-gift"></i> &nbsp;My Orders</button>
+            <button class="myCart-btn" onclick="cartSlide(),showProfile()"><i class="fas fa-shopping-cart"></i> &nbsp;My
+                Cart</button>
+        </div>
+    </div>
+
+    <!---------------------------- Login/Signup form ---------------------------->
+    <div class="ls-container">
+        <div class="oraBg">
+            <i class="fas fa-times l" onclick="showlsForm()"></i>
+            <div class="box signin">
+                <h2>Already have an Account</h2>
+                <button class="signinBtn">Sign in</button>
+            </div>
+
+            <div class="box signup">
+                <h2>Don't have an Account</h2>
+                <button class="signupBtn">Sign up</button>
+            </div>
+            <i class="fas fa-times r" onclick="showlsForm()"></i>
+        </div>
+
+        <div class="formBox">
+            <div class="form signinForm">
+                <form action="">
+                    <h3>Sign In</h3>
+                    <input type="text" name="username" placeholder="Username">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                    <a href="#" class="forgot">Forgot Password</a>
+                </form>
+            </div>
+
+            <div class="form signupForm">
+                <form action="">
+                    <h3>Sign Up</h3>
+                    <input type="text" name="username" placeholder="Enter Username">
+                    <input type="email" name="email" placeholder="Enter your Email">
+                    <input type="number" name="house" placeholder="Enter house no.">
+                    <input type="password" name="Crpassword" placeholder="Create Password">
+                    <input type="password" name="Cnpassword" placeholder="Confirm Password">
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------- sticky category div -------------------------->
+    <div class="stickyDiv">
+        <div class="prdct-head">
+            <p>Product/Categories</p>
+        </div>
+        <div class="prdct-cates">
+            <div class="prdct-cates-item">
+                <p>Groceries</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Personal Care</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Breakfast</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Vegetables & Fruits</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Household Items</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Kitchen Items</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Snacks & Chocolates</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Beverages</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Breakfast & Dairy</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Baby Care</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Pet Care</p>
+            </div>
+            <div class="prdct-cates-item">
+                <p>Cleaning & Bathroom Essentials</p>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------ products of the category ------------------------>
+    <div class="category-products">
+        <h1>Products/Categories/<span></span></h1>
+        <div class="cate-products">
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+            <div class="prdct">
+                <div class="prdct-img">
+                    <img src="img/flour.png" alt="product-image">
+                </div>
+                <div class="prdct-details">
+                    <div>
+                        <p class="prdct-name">Fortune Besan</p>
+                        <p class="prdct-unit">1KG</p>
+                    </div>
+                    <p class="prdct-price">₹125</p>
+                </div>
+                <button class="atc">Add to Cart</button>
+                <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!----------------------- Products Desc Modal ----------------------->
+    <div class="product-specs products" id="product-specs">
+        <i class="fas fa-times" onclick="showProductSpecs()"></i>
+        <div class="product-single">
+            <div class="product-imgs">
+                <img src="img/flour.png" alt="product-img" id="prdct-img">
+                <div class="product-other-imgs">
+                    <div class="small-imgs">
+                        <img src="img/flour.png" alt="otherImages" class="other-img">
+                    </div>
+                    <div class="small-imgs">
+                        <img src="img/fortune-other1.jpg" alt="otherImages" class="other-img">
+                    </div>
+                    <div class="small-imgs">
+                        <img src="img/fortune-other2.jpg" alt="otherImages" class="other-img">
+                    </div>
+                    <div class="small-imgs">
+                        <img src="img/fortune-other3.jpg" alt="otherImages" class="other-img">
+                    </div>
+                </div>
+            </div>
+            <div class="product-desc">
+                <p class="product-category">Category/Groceries</p>
+                <p class="product-name">Fortune Besan (Gram Flour) 500gram</p>
+                <p class="product-price">₹50.00</p>
+                <p class="product-instock"><i class="fas fa-circle"></i> In Stock</p>
+                <div>
+                    <input type="number" value="1">
+                    <button class="atc">Add to Cart</button>
+                </div>
+                <div class="specs">
+                    <h3>Product Specification</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit enim non earum eius neque
+                        molestias rem quibusdam inventore quia atque quisquam consequatur obcaecati hic reprehenderit,
+                        vero ad, illo minima et.</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-cate">
+            <h2>Similar Products</h2>
+            <div class="cate-products owl-carousel owl-theme">
+                <div class="prdct">
+                    <div class="prdct-img">
+                        <img src="img/flour.png" alt="product-image">
+                    </div>
+                    <div class="prdct-details">
+                        <div>
+                            <p class="prdct-name">Fortune Flour</p>
+                            <p class="prdct-unit">1KG</p>
+                        </div>
+                        <p class="prdct-price">₹125</p>
+                    </div>
+                    <button class="atc">Add to Cart</button>
+                    <div class="prdct-desc" onclick="showProductSpecs()"><a href="#product-specs">View</a></div>
+                </div>
+
+                <div class="prdct">
+                    <div class="prdct-img">
+                        <img src="img/flour.png" alt="product-image">
+                    </div>
+                    <div class="prdct-details">
+                        <div>
+                            <p class="prdct-name">Fortune Flour</p>
+                            <p class="prdct-unit">1KG</p>
+                        </div>
+                        <p class="prdct-price">₹125</p>
+                    </div>
+                    <button class="atc">Add to Cart</button>
+                    <div class="prdct-desc"><a href="#">View</a></div>
+                </div>
+
+                <div class="prdct">
+                    <div class="prdct-img">
+                        <img src="img/flour.png" alt="product-image">
+                    </div>
+                    <div class="prdct-details">
+                        <div>
+                            <p class="prdct-name">Fortune Flour</p>
+                            <p class="prdct-unit">1KG</p>
+                        </div>
+                        <p class="prdct-price">₹125</p>
+                    </div>
+                    <button class="atc">Add to Cart</button>
+                    <div class="prdct-desc"><a href="#">View</a></div>
+                </div>
+
+                <div class="prdct">
+                    <div class="prdct-img">
+                        <img src="img/flour.png" alt="product-image">
+                    </div>
+                    <div class="prdct-details">
+                        <div>
+                            <p class="prdct-name">Fortune Flour</p>
+                            <p class="prdct-unit">1KG</p>
+                        </div>
+                        <p class="prdct-price">₹125</p>
+                    </div>
+                    <button class="atc">Add to Cart</button>
+                    <div class="prdct-desc"><a href="#">View</a></div>
+                </div>
+
+                <div class="prdct">
+                    <div class="prdct-img">
+                        <img src="img/flour.png" alt="product-image">
+                    </div>
+                    <div class="prdct-details">
+                        <div>
+                            <p class="prdct-name">Fortune Flour</p>
+                            <p class="prdct-unit">1KG</p>
+                        </div>
+                        <p class="prdct-price">₹125</p>
+                    </div>
+                    <button class="atc">Add to Cart</button>
+                    <div class="prdct-desc"><a href="#">View</a></div>
+                </div>
+
+                <div class="prdct">
+                    <div class="prdct-img">
+                        <img src="img/flour.png" alt="product-image">
+                    </div>
+                    <div class="prdct-details">
+                        <div>
+                            <p class="prdct-name">Fortune Flour</p>
+                            <p class="prdct-unit">1KG</p>
+                        </div>
+                        <p class="prdct-price">₹125</p>
+                    </div>
+                    <button class="atc">Add to Cart</button>
+                    <div class="prdct-desc"><a href="#">View</a></div>
+                </div>
+
+                <div class="prdct">
+                    <p class="seeMore"><a href="#">See all <i class="fas fa-angle-double-right"></i></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------- footer section-------------------------->
+    <footer>
+        <div class="first">
+            <div class="comName">
+                <a href="index.html"><img src="img/1.png" alt="LOGO_Cash'N'Carry"></a>
+            </div>
+            <div class="getintouch">
+                <p class="head"><i class="fas fa-map-marker-alt"></i> Get In Touch</p>
+                <span>Sector 24, Karol bhag, New Delhi</span>
+            </div>
+        </div>
+
+        <div class="second">
+            <div class="categories">
+                <div class="head">
+                    Categories
+                </div>
+                <div class="items">
+                    <div>
+                        <a href="Products.html">Groceries</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Personal Care</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Breakfast & Dairy</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Vegetables & Fruits</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Household Items</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Kitchen Items</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Snacks & Chocolates</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Beverages</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Groceries & Staples</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Best Value</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Pet Care</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Baby Care</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Cleaning & Bathroom Essentials</a>
+                    </div>
+                    <div>
+                        <a href="Products.html">Noodles, Sauces & Instant Food</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about">
+                <div class="head">
+                    About
+                </div>
+                <div class="items">
+                    <div>
+                        <a href="other.html">Who we are</a>
+                    </div>
+                    <div>
+                        <a href="other.html">Returns & Refunds</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="foryou">
+                <div class="head">
+                    For You
+                </div>
+                <div class="items">
+                    <div>
+                        <a href="other.html">Privacy</a>
+                    </div>
+                    <div>
+                        <a href="other.html">Terms</a>
+                    </div>
+                    <div>
+                        <a href="other.html">Security</a>
+                    </div>
+                    <div>
+                        <a href="other.html">Sitemap</a>
+                    </div>
+                    <div>
+                        <a href="other.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-links">
+                <div class="head">
+                    Download App
+                </div>
+                <div class="items">
+                    <div>
+                        <a href=""><img src="img/playstore.png" alt="playstore"></a>
+                    </div>
+
+                    <div>
+                        <a href=""><img src="img/appstore.png" alt="appstore"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="third">
+            <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and
+                Content Policies. All trademarks are properties of their respective owners.
+            </p>
+            <p>2021 © <b>Cash'N'Carry</b> Ltd. All
+                rights reserved.</p>
+        </div>
+    </footer>
+
+    <!------------------------ Script Section ------------------------>
+
+    <!--------------- Font Awesome Script --------------->
+    <script src="https://kit.fontawesome.com/76448c9004.js" crossorigin="anonymous"></script>
+
+    <!-- Jquery & owl Carousel Javascript-->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/owl.carousel.js"></script>
+
+    <!------------------------ Slider js ------------------------>
+    <script src="js/owlSlider.js"></script>
+
+    <!------------------- My Js ------------------->
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,488 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+.bgColor {
+  background: #f7e0b5;
+}
+
+.nav-bar {
+  justify-content: space-between;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.85);
+}
+
+.nav-bar .list {
+  margin: 0 1rem;
+}
+
+.nav-bar .list a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar .list ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-bar .list ul li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.nav-bar .list ul li:hover {
+  font-weight: 600;
+  background-color: rgb(24, 23, 23);
+}
+
+.nav-bar i {
+  padding: 1rem;
+  font-size: 1.1rem;
+  display: none;
+}
+
+.listC {
+  position: absolute;
+  top: -50%;
+  right: 0%;
+  text-align: center;
+  margin: 0;
+  width: 50%;
+  color: white;
+  background-color: rgb(44, 43, 43);
+  border-top: 1px solid orangered;
+  border-bottom: 1px solid orangered;
+  border-radius: 3px;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  display: none;
+}
+
+.listC a {
+  text-decoration: none;
+  color: white;
+}
+
+.listC ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.listC ul li {
+  border-bottom: 1px solid orangered;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.listC ul li:hover {
+  font-weight: 600;
+  background-color: rgb(24, 23, 23);
+}
+
+.listC-toggle {
+  top: 8.2%;
+  visibility: visible;
+  transition: all 0.4s ease-in-out;
+}
+
+/********************** contact & locate us section css  **********************/
+
+.container {
+  font-family: "Poppins", sans-serif;
+  z-index: 12;
+  width: 85%;
+  background: #fff;
+  border-radius: 12px;
+  margin: 2rem auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 1.2rem;
+}
+
+.content .image-box {
+  width: 55%;
+}
+
+.content .image-box img {
+  width: 100%;
+}
+
+.content .topic {
+  font-size: 22px;
+  font-weight: 500;
+  color: orange;
+}
+
+.content form {
+  width: 40%;
+  margin-right: 30px;
+}
+
+.content .input-box {
+  height: 50px;
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+}
+
+.content .input-box input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  padding-left: 16px;
+  background: #f7e0b5;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.content .input-box input:focus,
+.content .input-box input:valid {
+  border-color: #ba24c2;
+  background-color: #fff;
+}
+
+.content .input-box label {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  color: #636c72;
+  font-size: 15px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.content .input-box input:focus ~ label,
+.content .input-box input:valid ~ label {
+  top: 0;
+  left: 12px;
+  display: 14px;
+  color: #ba24c2;
+  background: #fff;
+  /* border-radius: ; */
+}
+
+.content .message-box {
+  min-height: 100px;
+  position: relative;
+}
+
+.content .message-box textarea {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  background: #f7e0b5;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  padding: 2px 0;
+  padding-left: 16px;
+  transition: all 0.3s ease;
+}
+
+.content .message-box textarea:focus {
+  border-color: #ba24c2;
+  background-color: #fff;
+}
+
+.content .message-box label {
+  position: absolute;
+  font-size: 16px;
+  color: #636c72;
+  left: 18px;
+  top: 6px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.content .message-box textarea:focus ~ label {
+  left: 12px;
+  top: -10px;
+  color: #ba24c2;
+  font-size: 14px;
+  background: #fff;
+}
+
+.content .input-box input[type="submit"] {
+  color: #fff;
+  background: #ba24c2;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.content .input-box input[type="submit"]:hover {
+  background-color: #d43ddb;
+}
+
+.mp-box {
+  padding: 0.5rem 1rem;
+}
+
+.mp-box .address {
+  padding-left: 1rem;
+  width: 40%;
+}
+
+.mp-box .map-cont .form {
+  margin-right: 0;
+}
+
+.container .map-cont .map-div {
+  width: 60%;
+  border-radius: 10px;
+}
+
+.container .map-cont .map-div iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.mp-box .map-cont .address h3 {
+  margin-top: 8px;
+  padding: 2px 0;
+}
+
+/********************** return and refund section **********************/
+.rnr {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 85%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.rnr .title {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  margin: 1rem auto;
+  margin-top: 0.5rem;
+}
+
+.rnr .qna {
+  width: 95%;
+  margin: 0.5rem auto;
+}
+
+.rnr .qna .que {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.rnr .qna .ans {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+
+/*************************** Responsive css ***************************/
+@media only screen and (max-width: 900px) {
+  .content .image-box {
+    width: 55%;
+  }
+  .content form {
+    width: 45%;
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-bar .list ul li {
+    padding: 1rem 0.8rem;
+  }
+
+  .nav-bar .logo {
+    width: 30%;
+    padding: 6px;
+  }
+
+  .listC {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container .content {
+    flex-direction: column;
+  }
+
+  .container .map-cont {
+    flex-direction: column-reverse;
+  }
+
+  .content .image-box {
+    width: 80%;
+  }
+
+  .content form {
+    width: 90%;
+  }
+
+  .container .map-cont .map-div {
+    width: 90%;
+    margin: 0.3rem 0;
+  }
+
+  .mp-box .address {
+    width: 90%;
+    margin: 0.3rem 0;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-bar .list ul li {
+    padding: 1rem 0.8rem;
+  }
+
+  .nav-bar .logo {
+    display: unset;
+  }
+
+  .nav-bar .logo {
+    width: 40%;
+    padding: 6px;
+  }
+
+  .nav-bar i {
+    display: unset;
+  }
+
+  .nav-bar .list {
+    display: none;
+  }
+
+  .listC {
+    display: unset;
+  }
+
+  .rnr .title {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin: 0.5rem auto;
+  }
+
+  .rnr .qna .que {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+  }
+
+  .rnr .qna .ans {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0.5rem 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .listC {
+    width: 70%;
+  }
+
+  .nav-bar .logo {
+    width: 60%;
+    padding: 6px;
+  }
+
+  .nav-bar .logo img {
+    width: 90%;
+  }
+
+  .listC ul li {
+    border-bottom: 1px solid orangered;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+  }
+
+  /******************** Contact & locate us section css ********************/
+  .container .content {
+    padding: 1.2rem 0.2rem;
+  }
+
+  .content .image-box {
+    width: 90%;
+  }
+
+  .content .input-box input[type="submit"] {
+    font-size: 16px;
+  }
+
+  .content .message-box label {
+    font-size: 13px;
+  }
+
+  .content .topic {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: orange;
+  }
+
+  .container .map-cont .map-div {
+    width: 95%;
+    margin: 0.3rem 0;
+  }
+
+  .mp-box .map-cont .address h3 {
+    font-size: 1rem;
+    margin-top: 8px;
+    padding: 2px 0;
+  }
+
+  .mp-box .map-cont .address p {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    padding: 2px 0;
+  }
+
+  .rnr .title {
+    font-size: 1rem;
+    font-weight: bolder;
+    margin: 0.3rem auto;
+    margin-bottom: 0;
+  }
+
+  .rnr .qna .que {
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+  }
+
+  .rnr .qna .ans {
+    font-size: 0.6rem;
+    font-weight: 300;
+    margin: 0.5rem 0;
+  }
+}
